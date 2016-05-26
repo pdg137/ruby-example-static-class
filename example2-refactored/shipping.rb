@@ -5,10 +5,8 @@ class ShippingQuote
 
     base_shipping = self.get_base_shipping(total_weight, destination_country)
 
-    # charge $5 extra for lithium batteries
     battery_charge = self.get_lithium_battery_charge(items)
 
-    # insurance costs $0.50 per $100
     insurance = self.get_insurance(total_value)
 
     base_shipping + battery_charge + insurance
